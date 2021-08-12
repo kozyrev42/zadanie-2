@@ -1,0 +1,18 @@
+#mobi {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  background-color: rgb(15, 122, 102);
+  height: 70px;
+}
+
+
+.mobi {
+  height: 20px;
+  padding: 10px;
+  margin: 15px;
+
+}
+.mobi:hover{
+  background-color: rgb(36, 184, 134);
+}

@@ -46,7 +46,6 @@ class Uprav extends Component {
 			okno1: !this.state.okno1
 		});
 	}
-
 	render () {
 		return (
 			<div>
@@ -62,8 +61,4 @@ class Uprav extends Component {
 		);
 	}
 }
-
-
-
-
 export default Uprav;

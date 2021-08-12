@@ -1,20 +1,26 @@
 import React, { Component } from "react";
 import Head from "./Head";
-import Uprav from "./Uprav"
+import Mobi from "./Mobi";
+import Uprav from "./Uprav";
 
 class Container extends Component {
-	
-	shouldComponentUpdate(nextProps, nextState){  // блок лишнего рендера
-		return false;
-	}
-
 	render () {
-		return (
-			<div>
-				<Head/>
-				<Uprav/>
-			</div>
+		let width = window.innerWidth;
+		if (width > 830) {
+			return (
+				<div>
+					<Head/>
+					<Uprav/>
+				</div>
 			);
+		} else {
+			return (
+				<div>
+					<Mobi/>
+					<Uprav/>
+				</div>
+			)
+		}
 	}
 }
 

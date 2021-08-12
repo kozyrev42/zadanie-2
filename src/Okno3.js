@@ -15,8 +15,7 @@ class Okno3 extends Component {
 				<div><p className="text2"> пассажирской таможенной декларации </p></div>
 				<div><p className="text2"> и штрих код для доступа к </p></div>
 				<div><p className="text2"> быстрой печати с сенсорного терминала </p></div>
-
-				<div> <button className="but4" onMouseDown={this.props.clickButton3}> Вернуться </button></div>  
+				<div> <button className="but34" onMouseDown={this.props.clickButton3}> Вернуться </button></div>  
 			</div>
 		);
 	}

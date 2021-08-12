@@ -4,7 +4,7 @@ import './Head.css'
 import gerb from'./gerb.jpg'
 
 class Head extends Component {
-	shouldComponentUpdate(nextProps, nextState){  // блок лишнего рендера
+	shouldComponentUpdate(nextProps, nextState){  // блок рендера
 		return false;
 	}
 
