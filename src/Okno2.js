@@ -12,15 +12,13 @@ class Okno2 extends Component {
 	    };
 		this.onChangeInput = this.onChangeInput.bind(this);
 		this.proverka = this.proverka.bind(this);
-		
 	}
-	
+
 	onChangeInput(event) {
 		const name = event.target.name;
 		this.setState({[name]: event.target.value});  // каждый name - получит своё значение
 	}
 
-	
 	proverka = () => {
 		let pass1 = this.state.pass1;
 		let pass2 = this.state.pass2;
@@ -31,15 +29,16 @@ class Okno2 extends Component {
 		if (pass1=='1' && pass2=='2' && pass3=='3' && pass4=='4') {
 			znach = false;
 			console.log('верно');
+			this.props.parentCallback(znach);
 		} else {
 			alert('Пароль не верный !');
 		}
-		this.props.parentCallback(znach);  // передал булевое значение в родительский, там по значению меняется стэйт
+		  
 	}
 
 	
 	render () {
-		if (this.props.okno2display===false) {
+		if (this.props.okno2display===false) {   // no render
 			return null;
 		}
 
