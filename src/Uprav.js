@@ -11,6 +11,8 @@ class Uprav extends Component {
 		};
 		this.transfer = this.transfer.bind(this);
 		this.clickButton = this.clickButton.bind(this);
+		/* this.transfer2 = this.transfer2.bind(this); */
+		this.clickButton2 = this.clickButton2.bind(this);
 	}
 
 	clickButton(e) {
@@ -24,14 +26,29 @@ class Uprav extends Component {
 		});
 	}
 
-	
+	/* clickButton2(e) {
+		this.transfer2();
+		e.stopPropagation();   
+	}
+	transfer2() {    
+		this.setState ({
+			okno2: !this.state.okno2
+		});
+	} */
+	clickButton2=(chiidData) => {
+		this.setState ({
+			okno2: chiidData
+		});
+	}
+
 	render () {
 		return (
 			<div>
 				<Okno1 clickButton={this.clickButton}
 					   okno1display={this.state.okno1}/>
 
-				<Okno2 okno2display={this.state.okno2}/>
+				<Okno2  parentCallback={this.clickButton2}
+						okno2display={this.state.okno2}/>
 			</div>
 		);
 	}
